@@ -1,24 +1,9 @@
-def is_prime(n):
-    """Return True if n is a prime number, else False."""
-    if n <= 1:
-        return False
-    if n <= 3:
-        return True
-    if n % 2 == 0 or n % 3 == 0:
-        return False
-    # Check divisors up to sqrt(n)
-    i = 5
-    while i * i <= n:
-        if n % i == 0 or n % (i + 2) == 0:
-            return False
-        i += 6
-    return True
+name = input("What is your name? ")
+age = int(input("How old are you? "))
 
-try:
-    num = int(input("Enter a number: "))
-    if is_prime(num):
-        print(f"{num} is a prime number.")
-    else:
-        print(f"{num} is not a prime number.")
-except ValueError:
-    print("Invalid input. Please enter an integer.")
+next_year_age = age + 1
+
+print(f"Hello, {name}!")
+print(f"You are {age} years old.")
+print(f"Next year, you will be {next_year_age} years old.")
+
